@@ -1,0 +1,17 @@
+@use "../tools/mixins" as navbar;
+@use "../base/variables" as variable;
+
+.Navbar {
+  background-color: map-get(variable.$colors, "light");
+  height: 4.375rem;
+  @include navbar.flex(space-between, center);
+  &-links {
+    @include navbar.flex(flex-start, center);
+    gap: 0.625rem;
+    padding-left: .9375rem;
+  }
+
+  &-logo {
+    width: 7.5rem;
+  }
+}
