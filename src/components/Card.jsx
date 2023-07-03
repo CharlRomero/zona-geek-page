@@ -1,10 +1,11 @@
-import Button from "./Button";
+import { Link, useParams } from "react-router-dom";
 
-export const Card = ({ name, brand, price }) => {
+export const Card = ({ name, brand, price, img, id }) => {
+  const { item } = useParams();
   return (
     <section className="Card">
       <section className="Card-img">
-        <img src="https://lh3.googleusercontent.com/drive-viewer/AFGJ81ruQy75uuBodC1edDUJ2GCUVF8jw_GeA0abq8q1OtsciYBIwfTvZinWzW9n8sQjhomTtqumORjw6zSANYJFN5kPRzx5Ag=s1600" alt="Device" className="Card-img--size" />
+        <img src={img} alt="Device" className="Card-img--size" />
       </section>
       <section className="Card-item">
         <section className="Card-description">
@@ -12,8 +13,13 @@ export const Card = ({ name, brand, price }) => {
           <h3 className="Card-h Card-h--light">{brand}</h3>
         </section>
         <section className="Card-info">
-          <h3 className="Card-h Card-h--bold">{price}</h3>
-          <Button className="Button" title="Alquilar" />
+          <h3 className="Card-h Card-h--bold">{price} $/mes</h3>
+          <Link
+            className="Button"
+            to={`/${item === undefined ? "item" : item}/${id}`}
+          >
+            Alquilar
+          </Link>
         </section>
       </section>
     </section>

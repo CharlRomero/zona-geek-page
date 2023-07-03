@@ -4,9 +4,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import App from "./App.jsx";
 import { Home } from "./pages/Home.jsx";
-import { Phone } from "./pages/Phone.jsx";
 
 import "./sass/style.scss";
+import { Land } from "./pages/Land.jsx";
+import { Item } from "./pages/Item.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -14,7 +15,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Routes>
         <Route element={<App />}>
           <Route path="/" element={<Home />} />
-          <Route path="/phone" element={<Phone />} />
+          <Route path="/:item/:id" element={<Item />} />
+          <Route path="/:item" element={<Land />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -2,6 +2,7 @@ import { useFetch } from "../util/useFetch";
 import { Card } from "../components/Card";
 
 const apiURL = import.meta.env.VITE_API;
+const googleImg = import.meta.env.VITE_GOOGLE_IMG;
 
 export const ItemGrid = ({ item }) => {
   const URL = `${apiURL}${item}`;
@@ -15,6 +16,8 @@ export const ItemGrid = ({ item }) => {
           name={item.ITEM_NAME}
           brand={item.BRAN_NAME}
           price={item.ITEM_PRICE}
+          img={`${googleImg}${item.ITEM_IMG}`}
+          id={item.ITEM_ID}
         />
       ))}
     </section>

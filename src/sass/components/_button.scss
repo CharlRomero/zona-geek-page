@@ -5,14 +5,21 @@
   font-family: map-get(variable.$fonts, "subtitle");
   font-size: 1.5em;
   @include button.flex;
-  color: map-get(variable.$colors, "black-secondary" );
+  color: map-get(variable.$colors, "black-secondary");
   background-color: map-get(variable.$colors, "secondary");
   width: 7.5rem;
   border-radius: 1.25rem;
-  padding: .625rem;
+  padding: 0.625rem;
+  box-shadow:  1px 1px 10px map-get(variable.$colors, "black-secondary" ),
+             -1px -1px 10px map-get(variable.$colors, "secondary" );
+  &--size {
+    width: 9.375rem;
+  }
 }
 
 .Button:hover {
-  color: map-get(variable.$colors, "black");
+  color: map-get(variable.$colors, "secondary");
+  background-color: map-get(variable.$colors, "black-secondary");
+  font-weight: 500;
   cursor: pointer;
 }

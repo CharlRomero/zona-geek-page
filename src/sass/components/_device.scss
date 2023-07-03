@@ -4,6 +4,7 @@
 .Device {
   @include device.flex(space-evenly);
   height: 31.25rem;
+  padding-top: 1.25rem;
 
   &-description {
     @include device.flex(center, flex-start, column);

@@ -1,17 +1,15 @@
-import devices from "../assets/devices.png";
-
-export const Device = () => {
+export const Device = ({ text, device, price }) => {
   return (
     <section className="Device">
       <section className="Device-description">
-        <h2 className="Device-h2">¡Todo en un solo lugar!</h2>
+        <h2 className="Device-h2">{text}</h2>
         <section className="Device-info">
           <h3 className="Device-h3">Tu renting desde</h3>
-          <span className="Device-span">49.9 $/mes</span>
+          <span className="Device-span">{price} $/mes</span>
         </section>
       </section>
       <section className="Device-image">
-        <img src={devices} alt="devices" className="Device-image--img" />
+        <img src={device} alt="devices" className="Device-image--img" />
       </section>
     </section>
   );

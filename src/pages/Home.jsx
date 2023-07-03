@@ -1,12 +1,12 @@
 import { Device } from "../components/Device";
 import { ItemGrid } from "../components/ItemGrid";
-import { Card } from "../components/Card";
+
+import devices from "../assets/devices.png";
 
 export const Home = () => {
   return (
     <>
-      <Device />
-      <Card name="Phone" brand="Apple" price="440"/>
+      <Device text="¡Todo en un solo lugar!" device={devices} price="49.99"/>
       <ItemGrid item="item"/>
     </>
   );

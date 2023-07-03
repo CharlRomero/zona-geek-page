@@ -3,4 +3,5 @@
 
 .ItemGrid{
     @include itemgrid.grid(20rem, 1.125rem, center);
+    padding-top: 1.25rem;
 }
